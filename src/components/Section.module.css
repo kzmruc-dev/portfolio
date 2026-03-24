@@ -1,0 +1,17 @@
+.section {
+  padding: 64px 48px;
+  border-top: 1px solid var(--line);
+}
+
+.label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 680px) {
+  .section { padding: 48px 24px; }
+}
