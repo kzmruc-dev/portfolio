@@ -4,7 +4,7 @@ import s from "./Services.module.css";
 export default function Services({ services }) {
   return (
     <section id="services" className={styles.section}>
-      <p className={styles.label}>Services — 副業でお手伝いできること</p>
+      <p className={styles.label}>Services</p>
       <div className={s.grid}>
         {services.map((item, i) => (
           <div key={item.title} className={s.block}>
