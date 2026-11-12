@@ -4,9 +4,10 @@ export default function Hero({ role, heroSubtitle, heroBio, heroTags = [], nameJ
   return (
     <div className={styles.hero}>
       {(nameJa || title) && (
-        <p className={styles.eyebrow}>
-          {nameJa}{nameJa && title ? " — " : ""}{title}
-        </p>
+        <div className={styles.identity}>
+          {title && <p className={styles.position}>{title}</p>}
+          {nameJa && <p className={styles.name}>{nameJa}</p>}
+        </div>
       )}
       <h1 className={styles.h1}>
         {role} <br />
