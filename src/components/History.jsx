@@ -12,7 +12,7 @@ export default function History({ history }) {
             <div className={s.content}>
               <p className={s.type}>{item.type}</p>
               <p className={s.title}>{item.title}</p>
-              <p className={s.org}>{item.org}</p>
+              {item.org && <p className={s.org}>{item.org}</p>}
               <p className={s.desc}>{item.desc}</p>
             </div>
           </div>

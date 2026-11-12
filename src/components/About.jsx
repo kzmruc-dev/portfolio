@@ -1,7 +1,7 @@
 import styles from "./Section.module.css";
 import about from "./About.module.css";
 
-export default function About({ about: paragraphs, location, role, interests }) {
+export default function About({ about: paragraphs, location, role, title, interests }) {
   return (
     <section id="about" className={styles.section}>
       <p className={styles.label}>About</p>
@@ -15,8 +15,8 @@ export default function About({ about: paragraphs, location, role, interests }) 
             <span className={about.metaVal}>{location}</span>
           </div>
           <div className={about.metaRow}>
-            <span className={about.metaKey}>Role</span>
-            <span className={about.metaVal}>{role}</span>
+            <span className={about.metaKey}>Current</span>
+            <span className={about.metaVal}>{title || role}</span>
           </div>
           <div className={about.metaRow}>
             <span className={about.metaKey}>Interests</span>

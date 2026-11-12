@@ -2,6 +2,8 @@ import profile from "./profile";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Services from "./components/Services";
+import Works from "./components/Works";
 import Skills from "./components/Skills";
 import Certifications from "./components/Certifications";
 import History from "./components/History";
@@ -12,13 +14,28 @@ import "./App.css";
 export default function App() {
   return (
     <>
-      <Nav name={profile.name} contact={profile.contact} />
-      <Hero role={profile.role} heroSubtitle={profile.heroSubtitle} heroBio={profile.heroBio} />
-      <About about={profile.about} location={profile.location} role={profile.role} interests={profile.interests} />
+      <Nav name={profile.name} />
+      <Hero
+        role={profile.role}
+        heroSubtitle={profile.heroSubtitle}
+        heroBio={profile.heroBio}
+        heroTags={profile.heroTags}
+        nameJa={profile.nameJa}
+        title={profile.title}
+      />
+      <About
+        about={profile.about}
+        location={profile.location}
+        role={profile.role}
+        title={profile.title}
+        interests={profile.interests}
+      />
+      <Services services={profile.services} />
+      <Works works={profile.works} />
       <Skills skills={profile.skills} />
       <Certifications certifications={profile.certifications} />
       <History history={profile.history} />
-      <Contact contact={profile.contact} />
+      <Contact contact={profile.contact} note={profile.contactNote} />
       <Footer name={profile.name} />
     </>
   );
