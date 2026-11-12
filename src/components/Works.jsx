@@ -23,7 +23,7 @@ export default function Works({ works }) {
             </div>
             {w.url && (
               <a href={w.url} target="_blank" rel="noreferrer" className={s.link}>
-                {w.urlLabel || w.url.replace(/^https?:\/\//, "")} ↗
+                {w.urlLabel || w.url.replace(/^https?:\/\//, "")} →
               </a>
             )}
           </article>

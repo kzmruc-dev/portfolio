@@ -10,8 +10,8 @@ export default function Hero({ role, heroSubtitle, heroBio, heroTags = [], nameJ
         </div>
       )}
       <h1 className={styles.h1}>
-        {role} <br />
-        {heroSubtitle}
+        {role}
+        {heroSubtitle && <><br />{heroSubtitle}</>}
       </h1>
       <p className={styles.bio}>{heroBio}</p>
       {heroTags.length > 0 && (
